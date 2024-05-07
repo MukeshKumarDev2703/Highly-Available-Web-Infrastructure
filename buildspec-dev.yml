@@ -23,7 +23,7 @@ phases:
   pre-build:
     on-failure: ABORT
     commands:
-      - echo terraform execution started on 'date'
+      - echo "terraform execution started on $(date)"
   build:
     on-failure: ABORT
     commands:
@@ -34,10 +34,10 @@ phases:
       - terraform init -input=false --backend-config=dev.conf
       - terraform validate
       - terraform plan -lock-false -input=false -var-file=dev.tfvars
-      - terraform $TF_COMMAND -input=false -var-file=dev.tfvars -auto-aprrove
+      - terraform $TF_COMMAND -input=false -var-file=dev.tfvars -auto-approve
   post-build:
     on-failure: CONTINUE
     commands:
-      - echo terraform execution started on 'date'
+      - echo "terraform execution started on $(date)"
     
 
