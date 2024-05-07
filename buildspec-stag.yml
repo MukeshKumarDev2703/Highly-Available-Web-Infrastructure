@@ -19,11 +19,11 @@ phases:
       - tf_version=$TERRAFORM_VERSION
       - wget https://releases.hashicorp.com/terraform/"$TERRAFORM_VERSION"/terraform_"$TERRAFORM_VERSION"_linux_amd64.zip
       - unzip terraform_"$TERRAFORM_VERSION"_linux_amd64.zip
-      - mv terraform/usr/local/bin/
-  pre-build:
+      - mv terraform /usr/local/bin/
+  pre_build:
     on-failure: ABORT
     commands:
-      - echo terraform execution started on 'date'
+      - echo "terraform execution started on $(date)"
   build:
     on-failure: ABORT
     commands:
@@ -35,9 +35,9 @@ phases:
       - terraform validate
       - terraform plan -lock-false -input=false -var-file=stag.tfvars.tfvars
       - terraform $TF_COMMAND -input=false -var-file=stag.tfvars -auto-aprrove
-  post-build:
+  post_build:
     on-failure: CONTINUE
     commands:
-      - echo terraform execution started on 'date'
+      - echo "terraform execution started on $(date)"
     
 
