@@ -22,8 +22,8 @@ terraform {
 # Provider Block
 provider "aws" {
   region  = var.aws_region
-  shared_config_files      = ["~/.aws/config"]
-  shared_credentials_files = ["~/.aws/credentials"]
+  access_key              = "AKIA3FLD4VYJWMDWEON2"
+  secret_key              = "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"
   profile = "default"
 }
 /*
