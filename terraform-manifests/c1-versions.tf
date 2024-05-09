@@ -22,8 +22,8 @@ terraform {
 # Provider Block
 provider "aws" {
   region  = var.aws_region
-  access_key              = "AKIA3FLD4VYJWMDWEON2"
-  secret_key              = "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"
+  #access_key              = "AKIA3FLD4VYJWMDWEON2"
+  #secret_key              = "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"
   #profile = "default"
 }
 /*
