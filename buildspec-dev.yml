@@ -15,6 +15,7 @@ phases:
       python: 3.7
     on-failure: ABORT       
     commands:
+      - sudo apt install unzip -y
       - tf_version=$TERRAFORM_VERSION
       - wget https://releases.hashicorp.com/terraform/"$TERRAFORM_VERSION"/terraform_"$TERRAFORM_VERSION"_linux_amd64.zip
       - unzip terraform_"$TERRAFORM_VERSION"_linux_amd64.zip
