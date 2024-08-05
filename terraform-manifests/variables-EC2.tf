@@ -35,8 +35,8 @@ variable "private_ec2" {
   })
 }
 
-## Variable for User Data Files
-variable "user_data_file" {
-  description = "Files for the user Data"
-  type        = list(string)
-}
+# ## Variable for User Data Files
+# variable "user_data_file" {
+#   description = "Files for the user Data"
+#   type        = list(string)
+# }
