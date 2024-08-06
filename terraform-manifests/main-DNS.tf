@@ -12,8 +12,8 @@ resource "aws_acm_certificate" "acm_certificate" {
   domain_name       = trimsuffix(data.aws_route53_zone.mydomain.name, ".")
   validation_method = "DNS"
   subject_alternative_names = [
-    "var.domain_name",
-    "*.${var.domain_name}"
+    var.domain_name,
+    "*.gotechworld.solutions"
   ]
   lifecycle {
 
