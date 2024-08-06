@@ -37,7 +37,7 @@ resource "aws_acm_certificate_validation" "validation" {
 ## Route53 Record Set
 resource "aws_route53_record" "route53_record" {
   zone_id = data.aws_route53_zone.mydomain.id
-  name    = "var.domain_name"
+  name    = var.domain_name
   type    = "A"
   alias {
     name                   = aws_lb.application_lb.dns_name
