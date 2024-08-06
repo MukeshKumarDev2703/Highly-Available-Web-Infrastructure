@@ -7,7 +7,7 @@ resource "aws_instance" "public_ec2" {
   subnet_id              = aws_subnet.public_subnet[0].id
   #subnet_id              = aws_subnet.public_subnet[count.index % length(var.vpc_public_subnets)].id
   tags = {
-    Name = "${local.environment}-${var.private_ec2.name}-${count.index + 1}"
+    Name = "${local.environment}-${var.public_ec2.name}-${count.index + 1}"
   }
   root_block_device {
     volume_size = var.public_ec2.root_block_device.volume_size
