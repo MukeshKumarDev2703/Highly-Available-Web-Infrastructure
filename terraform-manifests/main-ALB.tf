@@ -55,7 +55,7 @@ resource "aws_lb_listener" "http_listener" {
 
 ## ALB HTTPS Listener
 resource "aws_lb_listener" "https_listener" {
-  depends_on        = [aws_acm_certificate.acm_certificate]
+  depends_on        = [aws_acm_certificate.acm_certificate, aws_acm_certificate_validation.validation, aws_route53_record.validation]
   load_balancer_arn = aws_lb.application_lb.arn
   port              = var.https_listener_values.port
   protocol          = var.https_listener_values.protocol

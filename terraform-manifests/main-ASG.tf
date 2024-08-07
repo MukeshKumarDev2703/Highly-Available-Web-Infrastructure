@@ -92,6 +92,7 @@ resource "aws_autoscaling_policy" "avg_cpu_policy_greater_than_xx" {
 ## Autoscaling Policy Based on Alb target Request
 
 resource "aws_autoscaling_policy" "alb_target_request_greater_then_yy" {
+  depends_on = [ aws_lb_listener.https_listener ]
   name                      = "${local.name_prefix}-alb-target-request-greater-then-yy"
   autoscaling_group_name    = aws_autoscaling_group.autoscaling_group.name
   estimated_instance_warmup = 120
