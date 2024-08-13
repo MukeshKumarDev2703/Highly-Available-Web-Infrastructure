@@ -1,9 +1,5 @@
 ## Prefix Name od Services
-name_prefix = "Dev-fully-managed"
-
-## Owner
-owner = "Admin"
-## Environment Variable
+name_prefix = "Dev-env"
 
 environment = "Dev"
 
