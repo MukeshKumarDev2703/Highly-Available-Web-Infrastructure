@@ -1,4 +1,4 @@
-name_prefix = "Stag-fully-managed"
+name_prefix = "Stag-env"
 
 ## Environment Variable
 environment = "Stag"
