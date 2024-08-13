@@ -1,3 +1,9 @@
+## Database Identifier
+variable "db_engine_identifier" {
+  type = string
+  
+  
+}
 ## Variable for Database Instance Values
 variable "db_instance_values" {
   description = "Database Instance Values"
@@ -6,7 +12,7 @@ variable "db_instance_values" {
     db_engine            = string
     db_engine_version    = string
     db_instance_class    = string
-    db_engine_identifier = string
+    #db_engine_identifier = string
 
   }))
 }

@@ -3,6 +3,9 @@ name_prefix = "Stag-env"
 ## Environment Variable
 environment = "Stag"
 
+## Database Instance Identifier
+db_engine_identifier = "my-stag-identifier"
+
 
 ##VPC Values
 aws_region = "ap-south-1"

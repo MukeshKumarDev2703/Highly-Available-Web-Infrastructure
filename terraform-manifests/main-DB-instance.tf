@@ -5,7 +5,8 @@ resource "aws_db_instance" "db_instance" {
   allocated_storage      = var.db_instance_values[0].db_allocated_storage
   engine                 = var.db_instance_values[0].db_engine
   engine_version         = var.db_instance_values[0].db_engine_version
-  identifier             = var.db_instance_values[0].db_engine_identifier
+  #identifier             = var.db_instance_values[0].db_engine_identifier
+  identifier = var.db_engine_identifier
   username               = var.db_username
   password               = var.db_password
   vpc_security_group_ids = [aws_security_group.database_sg.id]

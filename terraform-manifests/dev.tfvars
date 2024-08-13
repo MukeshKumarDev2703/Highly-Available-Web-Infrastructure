@@ -3,6 +3,9 @@ name_prefix = "Dev-env"
 
 environment = "Dev"
 
+## Database Instance Identifier
+db_engine_identifier = "my-dev-identifier"
+
 
 ##VPC Values
 aws_region = "ap-south-1"
