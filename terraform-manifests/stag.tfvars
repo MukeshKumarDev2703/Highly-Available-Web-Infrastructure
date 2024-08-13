@@ -1,3 +1,5 @@
+name_prefix = "Stag-fully-managed"
+
 ## Environment Variable
 environment = "Stag"
 

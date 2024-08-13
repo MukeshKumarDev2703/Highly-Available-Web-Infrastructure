@@ -1,4 +1,10 @@
+## Prefix Name od Services
+name_prefix = "Dev-fully-managed"
+
+## Owner
+owner = "Admin"
 ## Environment Variable
+
 environment = "Dev"
 
 
