@@ -21,7 +21,12 @@ resource "aws_security_group" "database_sg" {
       cidr_blocks = egress.value.cidr_blocks
     }
   }
-  tags = local.common_tags
+  tags = merge(
+    local.common_tags,
+    {
+      "Name" = "${local.name_prefix}-${var.database_sg_name}"
+    }
+  )
 }
 
 ## Database Security Group IDS
