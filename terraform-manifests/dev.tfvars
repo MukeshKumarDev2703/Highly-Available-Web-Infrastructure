@@ -54,4 +54,4 @@ private_ec2 = {
 } }
 
 ## DNS Name
-domain_name = "dev.gotechworld.solutions"
+domain_name = "gotechworld.solutions"

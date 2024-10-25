@@ -35,7 +35,7 @@ resource "aws_acm_certificate_validation" "validation" {
 }
 
 ## Route53 Record Set
-resource "aws_route53_record" "route53_record" {
+resource "aws_route53_record" "route53_A_record" {
   zone_id = data.aws_route53_zone.mydomain.id
   name    = var.domain_name
   type    = "A"
@@ -45,6 +45,15 @@ resource "aws_route53_record" "route53_record" {
     evaluate_target_health = true
   }
 
+}
+
+## Route53 CNAME Record.
+resource "aws_route53_record" "route53_CNAME_record" {
+  zone_id = data.aws_route53_zone.mydomain.id
+  name = "*"
+  type = "CNAME"
+  ttl = 300
+  records = var.domain_name
 }
 
 ##Validations for Alternative Names
