@@ -24,9 +24,9 @@ launch_config_values = {
 ## ASG Values
 asg_values = {
   asg_name          = "my-asg"
-  desired_capacity  = 1
-  min_size          = 1
-  max_size          = 5
+  desired_capacity  = 0
+  min_size          = 0
+  max_size          = 0
   health_check_type = "EC2"
   force_delete      = true
 }
