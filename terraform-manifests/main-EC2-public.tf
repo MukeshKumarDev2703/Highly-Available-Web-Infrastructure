@@ -4,7 +4,7 @@ resource "aws_instance" "public_ec2" {
   instance_type          = var.public_ec2.instance_type
   key_name               = var.public_ec2.instance_keypair
   vpc_security_group_ids = [aws_security_group.public_sg.id]
-  subnet_id              = aws_subnet.public_subnet[0].id
+  subnet_id              = aws_subnet.public_subnet[1].id
   #subnet_id              = aws_subnet.public_subnet[count.index % length(var.vpc_public_subnets)].id
   tags = {
     Name = "${local.environment}-${var.public_ec2.name}-${count.index + 1}"
