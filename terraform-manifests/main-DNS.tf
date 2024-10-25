@@ -53,7 +53,7 @@ resource "aws_route53_record" "route53_CNAME_record" {
   name = "*"
   type = "CNAME"
   ttl = 300
-  records = var.domain_name
+  records = [var.domain_name]
 }
 
 ##Validations for Alternative Names
