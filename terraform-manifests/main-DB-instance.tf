@@ -11,7 +11,7 @@ resource "aws_db_instance" "db_instance" {
   password               = var.db_password
   vpc_security_group_ids = [aws_security_group.database_sg.id]
   db_subnet_group_name   = aws_db_subnet_group.db_subnet_group.name
-  availability_zone      = data.aws_availability_zones.available_zones.names[0]
+  availability_zone      = data.aws_availability_zones.available_zones.names[1]
 
 
   #  multi_az            = var.db_config[0].multi_az
